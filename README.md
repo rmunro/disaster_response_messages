@@ -43,21 +43,23 @@ The categories are hierarchical, with sub-categories for `aid_related`, `infrast
 8. request: `0` or `1`, whether the message is a request for aid
 9. offer: `0` or `1`, whether the message is offering help
 10. aid_related: `0` or `1`, whether the message is related to aid
+
     11. medical_help: `0` or `1`, whether the message is about medical help
-    12. medical_products: `0` or `1`, whether the message is about medical products
-    13. search_and_rescue: `0` or `1`, whether the message is about search and rescue
-    14. security: `0` or `1`, whether the message is about personal security
-    15. military: `0` or `1`, whether the message is about military actions
-    16. child_alone: `0` or `1`, whether the message is about a child/children who are without adult care (all `0` in this public release)
-    17. water: `0` or `1`, whether the message is about drinking water
-    18. food: `0` or `1`, whether the message is about food
-    19. shelter: `0` or `1`, whether the message is about shelter
-    20. clothing: whether the message is about clothing
-    21. money: whether the message is about money
-    22. missing_people: whether the message is about missing people
-    23. refugees: whether the message is about refugees or internally displaced people
-    24. death: whether the message is about death
-    25. other_aid: whether the message is about another aid-related topic
+    
+    13. medical_products: `0` or `1`, whether the message is about medical products
+    14. search_and_rescue: `0` or `1`, whether the message is about search and rescue
+    15. security: `0` or `1`, whether the message is about personal security
+    16. military: `0` or `1`, whether the message is about military actions
+    17. child_alone: `0` or `1`, whether the message is about a child/children who are without adult care (all `0` in this public release)
+    18. water: `0` or `1`, whether the message is about drinking water
+    19. food: `0` or `1`, whether the message is about food
+    20. shelter: `0` or `1`, whether the message is about shelter
+    21. clothing: whether the message is about clothing
+    22. money: whether the message is about money
+    23. missing_people: whether the message is about missing people
+    24. refugees: whether the message is about refugees or internally displaced people
+    25. death: whether the message is about death
+    26. other_aid: whether the message is about another aid-related topic
 26. infrastructure_related: whether the message is about infrastructure-related issues
     27. transport: whether the message is about transport like buses, trains, planes, boats, taxis, bicycles, etc.
     28. buildings: whether the message is related to buildings: unstable, collapsed, inundated, usable as shelters, etc. 
