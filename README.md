@@ -45,7 +45,6 @@ The categories are hierarchical, with sub-categories for `aid_related`, `infrast
 10. aid_related: `0` or `1`, whether the message is related to aid
 
     11. medical_help: `0` or `1`, whether the message is about medical help
-    
     13. medical_products: `0` or `1`, whether the message is about medical products
     14. search_and_rescue: `0` or `1`, whether the message is about search and rescue
     15. security: `0` or `1`, whether the message is about personal security
@@ -60,7 +59,9 @@ The categories are hierarchical, with sub-categories for `aid_related`, `infrast
     24. refugees: whether the message is about refugees or internally displaced people
     25. death: whether the message is about death
     26. other_aid: whether the message is about another aid-related topic
+    
 26. infrastructure_related: whether the message is about infrastructure-related issues
+
     27. transport: whether the message is about transport like buses, trains, planes, boats, taxis, bicycles, etc.
     28. buildings: whether the message is related to buildings: unstable, collapsed, inundated, usable as shelters, etc. 
     29. electricity: whether the message is related to power infrastructure, including public utilities and private generators
@@ -69,13 +70,16 @@ The categories are hierarchical, with sub-categories for `aid_related`, `infrast
     32. shops: whether the message is related to shops, markets, and other places of commerce, real or online
     33. aid_centers: whether the message is related to aid_centers
     34. other_infrastructure: whether the message is related to other types of disaster-related infrastructure
+    
 35. weather_related: whether the message is weather-related
+
     36. floods: whether the message is related to flooding
     37. storm: whether the message is related to storms, including hurricanes, tornadoes and snow-storms
     38. fire: whether the message is related to fire, including house fires and bush/forest fires
     39. earthquake: whether the message is related to earthquakes
     40. cold: whether the message is related to dangers from cold weather
     41. other_weather: whether the message is related to other weather events
+    
 42. direct_report: whether the message is a direct report from someone experiencing/witnessing the disaster or if they are reporting second/third hand
 43. event: which event, `haiti_earthquake`, `pakistan_floods`, `usa_sandy`, or `NULL` for news
 44. actionable_haiti: was this message considered something that could be responded to at the time? (Haiti only)
