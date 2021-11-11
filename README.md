@@ -1,4 +1,4 @@
-# disaster_response_messages
+# Disaster Response Messages
 
 ## Summary
 This dataset contains 20,000 messages drawn from events including an earthquake in Haiti in 2010, floods in Pakistan in 2010, super-storm Sandy in the U.S.A. in 2012, and news articles spanning a large number of years and 100s of different disasters. The data has been encoded with 38 different categories related to disaster response and has been stripped of messages with sensitive information in their entirety. 
@@ -9,11 +9,11 @@ This dataset is released under creative commons attribution license.
 
 I responded to these events as a disaster responder. For Haiti and Pakistan, I also looked at applying NLP to the datasets to understand how we could improve future disaster response efforts. This became part of my PhD thesis, which should be attributed when using this dataset:
 
-Munro, Robert (2012). [Processing short message communications in low-resource languages](https://purl.stanford.edu/cg721hb0673). [PhD thesis, Stanford University]. Stanford Digital Repository. Retrieved from https://purl.stanford.edu/cg721hb0673
+Robert Munro. 2012. [Processing short message communications in low-resource languages](https://purl.stanford.edu/cg721hb0673). [PhD dissertation, Stanford University]. _Stanford Digital Repository_. Retrieved from https://purl.stanford.edu/cg721hb0673
 
 
 ```
-@phdthesis{phdthesis,
+@phdthesis{munro12dissertation,
   author       = {Robert Munro}, 
   title        = {Processing short message communications in low-resource languages},
   school       = {Stanford University},
@@ -82,15 +82,102 @@ The categories are hierarchical, with sub-categories for `aid_related`, `infrast
     
 * direct_report: `0` or `1`, whether the message is a direct report from someone experiencing/witnessing the disaster or if they are reporting second/third hand
 * event: which event, `haiti_earthquake`, `pakistan_floods`, `usa_sandy`, or `NULL` for news
-* actionable_haiti: `0` or `1`, was this message considered something that could be responded to at the time? (Haiti only)
-* date_haiti: date `(YYY-MM-DD)` the message was sent (Haiti only)
+* actionable_haiti: `0`, `1` or `NULL`, was this message considered something that could be responded to at the time? (Haiti only)
+* date_haiti: `(YYY-MM-DD)` or `null', the date the message was sent (Haiti only)
 
 
-# Thanks
+# Acknowledgements
 
 Thank you to the people who worked on Mission 4636 in Haiti and Pakreport in Pakistan who provided the translations and some of the categories. Thank you to Joan Xiao for helping with the identification and scrubbing of messages with sensitive or personal identifiable information (PII). 
 
 
+# References
+
+In additional to citing PhD dissertation above, consider citing these papers when relevant to your task:
+
+Human translation and annotation of data during disaster response efforts:
+
+Robert Munro. 2013. Crowdsourcing and the crisis-affected community - Lessons learned and looking forward from Mission 4636. _Journal of Information Retrieval_. 16:2. Springer.
+  year      = {2013} 
+
+```
+@article{munro13crisis,
+  author    = {Robert Munro},
+  title     = {Crowdsourcing and the crisis-affected community - Lessons learned and looking forward from Mission 4636},
+  journal   = {Journal of Information Retrieval},
+  volume    = {16},
+  number    = {2},
+  pages     = {210--266},
+  year      = {2013},
+  publisher = {Springer}
+}
+```
+
+Identifying "actionable" data in the Haiti messages:
+
+Robert Munro. 2011. Subword and Spatiotemporal Models for Identifying Actionable Information in Haitian Kreyol. _Processings of the Fifteenth Conference on Computational Natural Language Learning (CoNLL 2011)_. Association for Computational Linguistics.
+
+```
+@inproceedings{munro11conll,
+  author    = {Robert Munro},
+  title     = {Subword and Spatiotemporal Models for Identifying Actionable Information in \{H\}aitian \{K\}reyol},
+  booktitle = {Fifteenth Conference on Computational Natural Language Learning ({CoNLL 2011})},
+  pages     = {68--77},
+  publisher = {Association for Computational Linguistics},
+  year      = {2011}
+}
+```
+
+Comparing the categories across disasters and using transfer learning for domain adaptation from one disaster to another:
+
+Robert Munro and Christopher D. Manning. 2012. Short message communications: users, topics, and in-language processing. _Processings of the Second Annual Symposium on Computing for Development ({ACM DEV})_. ACM.
+
+```
+@inproceedings{munro12acmdev,
+  author    = {Robert Munro and
+               Christopher D. Manning},
+  title     = {Short message communications: users, topics, and in-language processing},
+  booktitle = {Second Annual Symposium on Computing for Development ({ACM DEV})},
+  pages     = {4:1--4:10},
+  publisher = {Association for Computational Machinery},
+  year      = {2012}
+}
+```
+
+
+Cross-lingual information extraction:
+
+Robert Munro and Christopher D. Manning. 2012. Accurate Unsupervised Joint Named-Entity Extraction from Unaligned Parallel Text. _Processings of the 4th Named Entities Workshop (NEWS)_. Association for Computational Linguistics.
+
+```
+@inproceedings{munro12ner,
+  author    = {Robert Munro and
+               Christopher D. Manning},
+  title     = {Accurate Unsupervised Joint Named-Entity Extraction from Unaligned Parallel Text},
+  booktitle = {The 4th Named Entities Workshop (NEWS)},
+  pages     = {21--29},
+  publisher = {Association for Computational Linguistics},
+  year      = {2012}
+}
+```
+
+Machine translation:
+
+William Lewis, Robert Munro and Stephan Vogel. 2011. Crisis MT: Developing A Cookbook for Machine Translation in Crisis Situations. _Processings of the 6th Annual Workshop on Machine Translation (WMT@EMNLP)_. Association for Computational Linguistics.
+
+
+```
+@inproceedings{lewis11wmt,
+  author    = {William Lewis and Robert Munro and Stephan Vogel},
+  title     = {Crisis {MT:} Developing {A} Cookbook for Machine Translation in Crisis Situations},
+  booktitle = {6th Annual Workshop on Machine Translation ({WMT@EMNLP})},
+  pages     = {501--511},
+  publisher = {Association for Computational Linguistics},
+  year      = {2011}
+}
+```
+
+# License
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
