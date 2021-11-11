@@ -1,7 +1,7 @@
 # Disaster Response Messages
 
 ## Summary
-This dataset contains 20,000 messages drawn from events including an earthquake in Haiti in 2010, floods in Pakistan in 2010, super-storm Sandy in the U.S.A. in 2012, and news articles spanning a large number of years and 100s of different disasters. The data has been encoded with 38 different categories related to disaster response and has been stripped of messages with sensitive information in their entirety. 
+This dataset contains 25,000 messages drawn from events including an earthquake in Haiti in 2010, floods in Pakistan in 2010, super-storm Sandy in the U.S.A. in 2012, and news articles spanning a large number of years and 100s of different disasters. The data has been encoded with 38 different categories related to disaster response and has been stripped of messages with sensitive information in their entirety. 
 
 ## License
 
@@ -95,7 +95,7 @@ Thank you to the people who worked on Mission 4636 in Haiti and Pakreport in Pak
 
 In additional to citing PhD dissertation above, consider citing these papers when relevant to your task:
 
-Human translation and annotation of data during disaster response efforts:
+### Human translation and annotation of data during disaster response efforts:
 
 Robert Munro. 2013. Crowdsourcing and the crisis-affected community - Lessons learned and looking forward from Mission 4636. _Journal of Information Retrieval_. 16:2. Springer.
   year      = {2013} 
@@ -113,7 +113,7 @@ Robert Munro. 2013. Crowdsourcing and the crisis-affected community - Lessons le
 }
 ```
 
-Identifying "actionable" data in the Haiti messages:
+### Identifying "actionable" data in the Haiti messages:
 
 Robert Munro. 2011. Subword and Spatiotemporal Models for Identifying Actionable Information in Haitian Kreyol. _Processings of the Fifteenth Conference on Computational Natural Language Learning (CoNLL 2011)_. Association for Computational Linguistics.
 
@@ -128,7 +128,7 @@ Robert Munro. 2011. Subword and Spatiotemporal Models for Identifying Actionable
 }
 ```
 
-Comparing the categories across disasters and using transfer learning for domain adaptation from one disaster to another:
+### Comparing the categories across disasters and using transfer learning for domain adaptation from one disaster to another:
 
 Robert Munro and Christopher D. Manning. 2012. Short message communications: users, topics, and in-language processing. _Processings of the Second Annual Symposium on Computing for Development ({ACM DEV})_. ACM.
 
@@ -145,7 +145,7 @@ Robert Munro and Christopher D. Manning. 2012. Short message communications: use
 ```
 
 
-Cross-lingual information extraction:
+### Cross-lingual information extraction:
 
 Robert Munro and Christopher D. Manning. 2012. Accurate Unsupervised Joint Named-Entity Extraction from Unaligned Parallel Text. _Processings of the 4th Named Entities Workshop (NEWS)_. Association for Computational Linguistics.
 
@@ -161,7 +161,7 @@ Robert Munro and Christopher D. Manning. 2012. Accurate Unsupervised Joint Named
 }
 ```
 
-Machine translation:
+### Machine translation:
 
 William Lewis, Robert Munro and Stephan Vogel. 2011. Crisis MT: Developing A Cookbook for Machine Translation in Crisis Situations. _Processings of the 6th Annual Workshop on Machine Translation (WMT@EMNLP)_. Association for Computational Linguistics.
 
