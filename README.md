@@ -290,5 +290,3 @@ This work is licensed under a
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
-![image](https://user-images.githubusercontent.com/184775/141409008-fa71c1dc-f52e-4935-8cd9-4bf2c53a99bb.png)
-![image](https://user-images.githubusercontent.com/184775/141410176-f364e870-624f-46f0-9d75-754b97e60017.png)
