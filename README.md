@@ -98,7 +98,7 @@ In additional to citing PhD dissertation above, consider citing these papers whe
 ### Human translation and annotation of data during disaster response efforts:
 
 Robert Munro. 2013. Crowdsourcing and the crisis-affected community - Lessons learned and looking forward from Mission 4636. _Journal of Information Retrieval_. 16:2. Springer.
-  year      = {2013} 
+
 
 ```
 @article{munro13crisis,
@@ -115,7 +115,7 @@ Robert Munro. 2013. Crowdsourcing and the crisis-affected community - Lessons le
 
 ### Identifying "actionable" data in the Haiti messages:
 
-Robert Munro. 2011. Subword and Spatiotemporal Models for Identifying Actionable Information in Haitian Kreyol. _Processings of the Fifteenth Conference on Computational Natural Language Learning (CoNLL 2011)_. Association for Computational Linguistics.
+Robert Munro. 2011. Subword and Spatiotemporal Models for Identifying Actionable Information in Haitian Kreyol. _Proceedings of the Fifteenth Conference on Computational Natural Language Learning (CoNLL 2011)_. Association for Computational Linguistics.
 
 ```
 @inproceedings{munro11conll,
@@ -130,7 +130,7 @@ Robert Munro. 2011. Subword and Spatiotemporal Models for Identifying Actionable
 
 ### Comparing the categories across disasters and using transfer learning for domain adaptation from one disaster to another:
 
-Robert Munro and Christopher D. Manning. 2012. Short message communications: users, topics, and in-language processing. _Processings of the Second Annual Symposium on Computing for Development ({ACM DEV})_. ACM.
+Robert Munro and Christopher D. Manning. 2012. Short message communications: users, topics, and in-language processing. _Proceedings of the Second Annual Symposium on Computing for Development (ACM DEV)_. Association for Computational Machinery.
 
 ```
 @inproceedings{munro12acmdev,
@@ -147,7 +147,7 @@ Robert Munro and Christopher D. Manning. 2012. Short message communications: use
 
 ### Cross-lingual information extraction:
 
-Robert Munro and Christopher D. Manning. 2012. Accurate Unsupervised Joint Named-Entity Extraction from Unaligned Parallel Text. _Processings of the 4th Named Entities Workshop (NEWS)_. Association for Computational Linguistics.
+Robert Munro and Christopher D. Manning. 2012. Accurate Unsupervised Joint Named-Entity Extraction from Unaligned Parallel Text. _Proceedings of the 4th Named Entities Workshop (NEWS)_. Association for Computational Linguistics.
 
 ```
 @inproceedings{munro12ner,
@@ -163,7 +163,7 @@ Robert Munro and Christopher D. Manning. 2012. Accurate Unsupervised Joint Named
 
 ### Machine translation:
 
-William Lewis, Robert Munro and Stephan Vogel. 2011. Crisis MT: Developing A Cookbook for Machine Translation in Crisis Situations. _Processings of the 6th Annual Workshop on Machine Translation (WMT@EMNLP)_. Association for Computational Linguistics.
+William Lewis, Robert Munro and Stephan Vogel. 2011. Crisis MT: Developing A Cookbook for Machine Translation in Crisis Situations. _Proceedings of the 6th Annual Workshop on Machine Translation (WMT@EMNLP)_. Association for Computational Linguistics.
 
 
 ```
