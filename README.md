@@ -325,7 +325,8 @@ Robert Munro. 2013. [Crowdsourcing and the crisis-affected community - Lessons l
   number    = {2},
   pages     = {210--266},
   year      = {2013},
-  publisher = {Springer}
+  publisher = {Springer},
+  url       = {https://robertmonarch.com/research/Mission_4636_Haiti_2010_SMS.pdf}
 }
 ```
 
@@ -340,7 +341,8 @@ Robert Munro. 2011. [Subword and Spatiotemporal Models for Identifying Actionabl
   booktitle = {Fifteenth Conference on Computational Natural Language Learning ({CoNLL 2011})},
   pages     = {68--77},
   publisher = {Association for Computational Linguistics},
-  year      = {2011}
+  year      = {2011},
+  url       = {https://aclanthology.org/W11-0309/}
 }
 ```
 
@@ -356,7 +358,8 @@ Robert Munro and Christopher D. Manning. 2012. [Short message communications: us
   booktitle = {Second Annual Symposium on Computing for Development ({ACM DEV})},
   pages     = {4:1--4:10},
   publisher = {Association for Computational Machinery},
-  year      = {2012}
+  year      = {2012},
+  url       = {https://nlp.stanford.edu/pubs/MunroManning2012acmdev.pdf}
 }
 ```
 
@@ -373,8 +376,8 @@ Robert Munro and Christopher D. Manning. 2012. [Accurate Unsupervised Joint Name
   booktitle = {The 4th Named Entities Workshop (NEWS)},
   pages     = {21--29},
   publisher = {Association for Computational Linguistics},
-  year      = {2012}
-}
+  year      = {2012},
+  url       = {https://aclanthology.org/W12-4403/}
 ```
 
 Note that these annotations are not part of the datasets here. If you are encoding the data further with potentially sensitive entities like names and locations, then you should get IRB or similar independent ethics review. 
@@ -391,7 +394,8 @@ William Lewis, Robert Munro and Stephan Vogel. 2011. [Crisis MT: Developing A Co
   booktitle = {6th Annual Workshop on Machine Translation ({WMT@EMNLP})},
   pages     = {501--511},
   publisher = {Association for Computational Linguistics},
-  year      = {2011}
+  year      = {2011},
+  url       = {https://aclanthology.org/W11-2164/}
 }
 ```
 
