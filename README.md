@@ -219,14 +219,7 @@ The "direct_report" category can help remote responders identify eye-witnesses t
 The "actionable_haiti" category is a specific definition of what could be responded to by international aid organizations during that disaster. These are the actual labels that we gave these messages at the time. In any disaster the definition of "actionable" will often be context-specific and changing. In the Haiti data this was initially Search and Rescue and medical emergencies, and then any individual request for drinking water, and later requests by groups of people who need food (but not individuals unless children). Any model built to automatically identify actionable information in a disaster will therefore need to be similarly time-sensitive or otherwise adaptive, which is a difficult task for machine learning.
 
 
-## Data 
-
-The data is split into training, validation, and test datasets:
-* disaster_response_messages/blob/main/disaster_response_training.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_training.csv)
-* [disaster_response_messages/blob/main/disaster_response_validation.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_validation.csv)
-* [disaster_response_messages/disaster_response_test.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_test.csv)
-
-The splits are random. See below for other potential splits.
+## Data
 
 ### Languages
 
