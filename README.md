@@ -101,7 +101,7 @@ The "actionable_haiti" category is a specific definition of what could be respon
 ## Data 
 
 The data is split into training, validation, and test datasets:
-* disaster_response_messages/blob/main/disaster_response_training.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_training.csv)
+* [disaster_response_messages/blob/main/disaster_response_training.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_training.csv)
 * [disaster_response_messages/blob/main/disaster_response_validation.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_validation.csv)
 * [disaster_response_messages/disaster_response_test.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_test.csv)
 
