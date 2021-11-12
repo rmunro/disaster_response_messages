@@ -5,12 +5,9 @@ This dataset contains 25,000 messages drawn from events including an earthquake 
 
 ## License
 
-This dataset is released under creative commons attribution license.
-
-I responded to these events as a disaster responder. For Haiti and Pakistan, I also looked at applying NLP to the datasets to understand how we could improve future disaster response efforts. This became part of my PhD thesis, which should be attributed when using this dataset:
+This dataset is released under creative commons attribution license (see below). Please cite:
 
 Robert Munro. 2012. [Processing short message communications in low-resource languages](https://purl.stanford.edu/cg721hb0673). [PhD dissertation, Stanford University]. _Stanford Digital Repository_. Retrieved from https://purl.stanford.edu/cg721hb0673
-
 
 ```
 @phdthesis{munro12dissertation,
@@ -24,7 +21,7 @@ Robert Munro. 2012. [Processing short message communications in low-resource lan
 }
 ```
 
-See below for other early papers about this dataset that should be referenced for certain use cases.
+I responded to these events as a disaster responder and for Haiti and Pakistan, I also looked at applying NLP to the datasets to understand how we could improve future disaster response efforts. This became part of my PhD thesis, which should be cited when using this dataset. See below for other early papers about this dataset that can be referenced for certain use cases.
 
 
 ## Categories
@@ -37,8 +34,8 @@ The categories are hierarchical, with sub-categories for `aid_related`, `infrast
 * split: `training`, `validation` or `test`
 * message: the English message
 * original: in the case of non-English messages in Haiti and Pakistan, the original message before translation
-* genre: `direct` or `news`
-* related: `0` or `1`, whether the message is related to a disaster 
+* genre: `direct` message or `news` headline
+* related: `0`, `1` or `2`, whether the message is related to a disaster (`1` == yes, `1` == unsure)
 * PII:  `0` or `1`, whether the message is related to a disaster (all `0` in this public release)
 * request: `0` or `1`, whether the message is a request for aid
 * offer: `0` or `1`, whether the message is offering help
@@ -85,6 +82,74 @@ The categories are hierarchical, with sub-categories for `aid_related`, `infrast
 * actionable_haiti: `0`, `1` or `NULL`, was this message considered something that could be responded to at the time? (Haiti only)
 * date_haiti: `(YYY-MM-DD)` or `null', the date the message was sent (Haiti only)
 
+# Data 
+
+The data is split into training, validation, and test datasets:
+* disaster_response_messages/blob/main/disaster_response_training.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_training.csv)
+* [disaster_response_messages/blob/main/disaster_response_validation.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_validation.csv)
+* [disaster_response_messages/disaster_response_test.csv](https://github.com/rmunro/disaster_response_messages/blob/main/disaster_response_test.csv)
+
+The splits are random.
+
+## Sources
+
+The data from Haiti and Pakistan are SMS messages sent to disaster reporting services following the respective disasters in 2010. The data from Superstorm Sandy ("hurricane Sandy") are postings from a disaster-related message board in 2011. The news headlines are from approximately the same time periods and cover a much large set of disasters. 
+
+All datasets are a subset of larger datasets that contains locations for some of the messages here and additional messages with sensitive and personal identifiable information that cannot be shared opely. This is why "PII" is `0` for all the data here. For access to more data from Haiti, including the chats between the people annotating the data, researchers working under IRB or equivalent can apply here: [https://www.mission4636.org/access-to-data/](https://www.mission4636.org/access-to-data/). Because of the sensitivity of messages related to children alone and the ethics regarding data that could be used to train a model to identify at-risk minors, no data about children alone is available in this dataset (or the ones available under IRB). This is why "child_alone" is `0` for all the data here.
+
+To decide which data to open source, we used two sources. We ran a survey of people who took part in the disaster response efforts from among the disaster-affected communities and asked them what they felt to be appropriate data to share and what was sensitive. We also took the best practices in data protection globally, using GDPR as the basis for definitions of personally identifying and sensitive data. Where the two did not line up, we took the most conservative option of the two, keeping more data private.
+
+There was only one case where we decided to be more careful than the majority vote. The majority people said that it was ok to remove sensitive information from the messages, but still share them with that information removed. However, enough people believed that the entire message should be omitted in this case, so we omitted the _entire_ message in the case that it contained sensitive data.
+
+An earlier public release of this dataset contained about 5,000 additional messages from social media platforms at the time. These are omitted from these datasets as being the victim of a disaster is considered health-related. It is now standard that social media platforms do not allow health-related information to be encoded about public social media posts without a person's explicit consent, because the public social media messages can be searched and tied back to that person's identity. 
+
+## Restrictions
+
+The data should not be combined with other data such that it would reveal the identities of people sending or mentioned in the messages. If any message is found to still contain personally identifying information it should be excluded from your study. Please contact me in these cases so that it can also be removed from the datasets (my email is my github handle, @alumni.stanford.edu).
+
+## Annotations
+
+The data was annotated by a combination of paid and volunteer people who are native speakers of the original languages and in many cases were also victims of the disasters. See my dissertation and the "Crowdsourcing and the crisis-affected community" article below for more information.
+
+# Common tasks
+
+There are several common tasks that are meaninful for this dataset:
+
+### Classification (all fields)
+
+Multilabel classification for the 36 fields from "related" to "direct_report" and "actionable_haiti" (minus the always `0` "PII" and "child_alone".
+
+### Classification (top level fields)
+
+Multilabel classification for the 4 fields, "related", "aid_related", "infrastructure_related", and "weather_related".
+
+### Intent Classification
+
+Classification for the "request" and "offer" fields, which can be multilabel or recast as a multiclass problem "request", "offer", "both", "none".
+
+### Eyewitness Report Identification
+
+Classification for "direct_report"
+
+### Actionable Information Detection
+
+Classification for "actionable", for the Haiti data only. This is the task in 2011 ConLL paper below.
+
+### Machine Translation
+
+The Haiti and Pakistan data can be used to train and evaluate machine translation models. Note that some of translations are summaries/paraphrases and contain exposition by the translators, so some data cleaning might be needed.
+
+A subset of the data was used as part of the shared task for the [2011 Workhop on Machine Translation (WMT)](https://www.statmt.org/wmt11/). See the WMT paper below for more details.
+
+### Progressive Classification & Active Learning
+
+An alternative to the random training/validation/test split is to split by time (dates for Haiti data and increasing IDs for the Pakistan data), training on earlier messages and predicting on later ones for the same disasters.
+
+This is closer to a real-life situation. In the case that a subset of messages get a human label, this can be cast as an active learning task. This was how the problem was framed in my PhD and the 2011 ConLL paper below.
+
+### Comparisons and transfer learning across domains
+
+The distribution of information across the disasters and genres can be investigated. This can be purely analytical or it can also investigate transfer learning to adapt models from one domain to another, and the issues that might arise in these cases. This was how the problem was framed in our ACM DEV paper below.
 
 # Acknowledgements
 
@@ -93,7 +158,7 @@ Thank you to the people who worked on Mission 4636 in Haiti and Pakreport in Pak
 
 # References
 
-In additional to citing PhD dissertation above, consider citing these papers when relevant to your task:
+In additional to citing the PhD dissertation above, consider citing these papers when relevant to your task. They are mostly condensed versions of parts of my dissertation, so they are also quicker places to read first:
 
 ### Human translation and annotation of data during disaster response efforts:
 
